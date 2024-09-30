@@ -1,14 +1,9 @@
 {
-  "build": {
-    "command": "npm run build",
-    "output": "./dist"
-  },
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ],
-  "framework": "node.js",
-  "target": "server"
+    "version": 2,
+    "builds": [
+      { "src": "/*.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+      { "src": "/(.*)", "dest": "/index.js" }
+    ]
 }
